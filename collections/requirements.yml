@@ -1,5 +1,5 @@
 ---
 collections:
   - name: vmware.vmware_rest
-    src: https://p1.ekeberg.io/api/galaxy/content/rh-certified/
+
     
