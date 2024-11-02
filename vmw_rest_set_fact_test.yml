@@ -1,0 +1,16 @@
+---
+- name: Lookup MoIDs of objects and add to register
+  hosts: localhost
+  gather_facts: false
+  vars:
+    connection_args:
+      vcenter_hostname: 
+      vcenter_username: 
+      vcenter_validate_certs:
+    vm_name: 'mssql'
+  tasks:
+    - set_fact:
+        vm_id: "{{ lookup('vmware.vmware_rest.vm_moid', vm_name, **connection_args) }}"
+      register: vm_id
+    - debug:
+        msg: "{{ vm_id }}"
