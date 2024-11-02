@@ -1,3 +1,0 @@
-- hosts: all
-  collections:
-    - vmware.vmware_rest
